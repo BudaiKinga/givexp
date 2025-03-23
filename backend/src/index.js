@@ -1,14 +1,18 @@
 const fs = require('fs')
 var http = require('http');
 var https = require('https');
+var cors = require('cors');
 const express = require('express');
 const { readConfig } = require('./readconfig');
+
 
 const config = readConfig(process.argv[2])
 
 var startup = async () => {
   const isSSL = config.sslFullchain && config.sslPrivkey
   const app = express()
+  app.use(cors())
+
 
   if (isSSL) {
     var certificate = fs.readFileSync(config.sslFullchain, 'utf8');
