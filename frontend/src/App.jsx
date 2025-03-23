@@ -11,7 +11,7 @@ function App() {
     callTestEndpoint().then(r =>{
       // handle error responses
 
-      setTs(r)
+      setTs(r + '')
     })
   }
 
