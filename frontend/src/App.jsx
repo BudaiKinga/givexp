@@ -10,9 +10,9 @@ function App() {
   const onButtonClick = () => {
     callTestEndpoint().then(r => {
       // handle error responses
-      console.log("r=" + r.body())
+      console.log("r=" + r.text())
 
-      setTs(r.body() + '')
+      setTs(r.text() + '')
     })
   }
 
