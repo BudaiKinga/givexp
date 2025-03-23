@@ -1,3 +1,5 @@
+git pull
+
 docker stop backend
 docker remove backend
 
