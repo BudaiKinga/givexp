@@ -11,4 +11,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 10443
-CMD [ "node", "/usr/src/app/src/index.js"]
+CMD [ "node", "/usr/src/app/src/index.js", "/usr/src/app/config.json"]

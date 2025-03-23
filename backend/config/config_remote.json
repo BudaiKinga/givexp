@@ -1,6 +1,6 @@
 {
     "port": 10443,
     
-    "sslFullchain": "/home/mrkobold/crown_work/crown/backend/config/fullchain.pem",
-    "sslPrivkey": "/home/mrkobold/crown_work/crown/backend/config/privkey.pem"
+    "sslFullchain": "/etc/ssl/ui_certs/fullchain.pem",
+    "sslPrivkey": "/etc/ssl/ui_certs/privkey.pem"
 }
