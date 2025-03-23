@@ -8,8 +8,9 @@ function App() {
   const [ts, setTs] = useState(0)
 
   const onButtonClick = () => {
-    callTestEndpoint().then(r =>{
+    callTestEndpoint().then(r => {
       // handle error responses
+      console.log("r=" + r)
 
       setTs(r + '')
     })
