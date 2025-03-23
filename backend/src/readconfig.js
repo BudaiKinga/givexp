@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const readConfig = function (path) {
-    console.log(`reading config file at: ${path}`)
+    console.log(`reading config file att: ${path}`)
     const configFileContent = fs.readFileSync(path)
     const configMap = JSON.parse(configFileContent)
 
