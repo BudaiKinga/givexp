@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 6968
+const port = 10443
 
-app.get('/', (req, res) => {
-  res.send('Puca Pist 8a!')
+app.get('/test', (req, res) => {
+  res.send('timestamp from backend: ' + Date.now())
 })
 
 app.listen(port, () => {

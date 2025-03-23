@@ -2,9 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/pistiek.jpg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { callTestEndpoint } from './backend/stuff'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ts, setTs] = useState(0)
+
+  const onButtonClick = () => {
+    callTestEndpoint().then(r =>{
+      // handle error responses
+
+      setTs(r)
+    })
+  }
 
   return (
     <>
@@ -18,8 +27,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={onButtonClick}>
+          backend response is: {ts}
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
