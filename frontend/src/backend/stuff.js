@@ -2,7 +2,7 @@ const BACKEND_URL = 'https://givexp.ro:10443/'
 const TEST_ENDPOINT = 'test'
 
 
-var callTestEndpoint = async () => {
+const callTestEndpoint = async () => {
     console.log('calling backend GET /test endpoint')
     const url = BACKEND_URL + TEST_ENDPOINT
 
@@ -10,4 +10,4 @@ var callTestEndpoint = async () => {
 }
 
 
-module.exports = { callTestEndpoint }
+export default callTestEndpoint

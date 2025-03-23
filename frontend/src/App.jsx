@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/pistiek.jpg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { callTestEndpoint } from './backend/stuff'
+import callTestEndpoint from './backend/stuff'
 
 function App() {
   const [ts, setTs] = useState(0)
