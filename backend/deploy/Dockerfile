@@ -10,5 +10,5 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 10443
 CMD [ "node", "/usr/src/app/src/index.js"]
