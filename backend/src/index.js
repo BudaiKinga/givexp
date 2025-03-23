@@ -32,7 +32,9 @@ var startup = async () => {
 
 var setupEndpoints = (app) => {
   app.get('/test', (req, res) => {
-    res.send('timestamp from backend: ' + Date.now())
+    const response = '' + Date.now()
+    console.log(`response = ${response}`)
+    res.send(response)
   })
 }
 
