@@ -9,7 +9,7 @@ function App() {
   const [ts, setTs] = useState(0)
 
   const onButtonClick = () => {
-    callTestEndpoint().then(r => {
+    crownBalanceOf().then(r => {
       // handle error responses
       r.text().then(res => {
         setTs(res + '')
