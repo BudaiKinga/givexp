@@ -1,0 +1,10 @@
+.search {
+    font-family: Inter;
+    font-size: 32px;
+    padding-left: 10px;
+    border-radius: 10px;
+    width: 50%;
+    height: 58px;
+    border: 0;
+    background: #002750;
+}
