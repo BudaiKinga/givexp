@@ -7,6 +7,16 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background: #081A29;
+
+    /* border: 1px solid; */
+    /* padding-bottom: 10px; */
+    box-shadow: 0 16px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2
+    /* cast shadow downward */
+}
+
+.recom .entry p {
+    margin-bottom: 1%;
 }
 
 .title {
@@ -34,7 +44,7 @@
     font-size: 24px;
 }
 
-.entry img {
+.recom .entry img {
     width: 165px;
     height: 165px;
 }

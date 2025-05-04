@@ -1,0 +1,47 @@
+.kategoriak {
+    background: #0E2F4B;
+    padding-left: 67px;
+    padding-right: 67px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 1;
+    box-shadow: 0 16px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #F1D27D;
+    font-size: 36px;
+    font-family: "Playfair Display";
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 62px;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: "Lora";
+    font-size: 24px;
+}
+
+.kategoriak .entry p {
+    margin-bottom: 1%;
+}

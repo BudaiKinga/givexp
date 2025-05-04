@@ -1,0 +1,55 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 50px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #F1D27D;
+    font-size: 36px;
+    font-family: "Playfair Display";
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background: #0C3455;
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-family: "Lora";
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.whom {
+    margin-bottom: 50px;
+}
+
+.reviews img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
