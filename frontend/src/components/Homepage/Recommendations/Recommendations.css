@@ -15,6 +15,12 @@
     /* cast shadow downward */
 }
 
+.mobilerecom {
+    display: flex;
+    flex-direction: column;
+    background: #081A29;
+}
+
 .recom .entry p {
     margin-bottom: 1%;
 }
@@ -31,6 +37,7 @@
 .recom .list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 62px;
     align-items: center;
     justify-content: center;

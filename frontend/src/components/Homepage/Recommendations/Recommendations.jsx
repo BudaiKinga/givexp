@@ -7,10 +7,13 @@ import kave from "../../../../public/images/thumbnail/kave.png";
 import szallas from "../../../../public/images/thumbnail/szallas.png";
 import torna from "../../../../public/images/thumbnail/torna.png";
 import tura from "../../../../public/images/thumbnail/tura.png";
+import { fnIsMobile } from "../../../utils/utils";
 
 const Recommendations = () => {
+  const isMobile = fnIsMobile();
+
   return (
-    <div className="recom"> 
+    <div className={isMobile ? "mobilerecom" : "recom"}>
       <div className="title">Ajánlott élményeink</div>
       <div className="list">
         <div className="entry">
@@ -18,7 +21,7 @@ const Recommendations = () => {
           <img src={szallas} />
         </div>
         <div className="entry">
-          <p>Kávékóstoló</p> 
+          <p>Kávékóstoló</p>
           <img src={kave} />
         </div>
         <div className="entry">
@@ -30,7 +33,7 @@ const Recommendations = () => {
           <img src={fenykep} />
         </div>
         <div className="entry">
-          <p>Alakformáló torna</p> 
+          <p>Alakformáló torna</p>
           <img src={torna} />
         </div>
         <div className="entry">
