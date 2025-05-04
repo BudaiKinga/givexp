@@ -4,9 +4,11 @@
     padding: 50px;
     gap: 50px;
     text-align: center;
+    z-index: 2;
+    box-shadow: 0 16px 10px rgba(0, 0, 0, 0.3);
 }
 
-.title {
+.reviews .title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,7 +17,7 @@
     font-family: "Playfair Display";
 }
 
-.list {
+.reviews .list {
     display: flex;
     flex-direction: row;
     gap: 17px;
@@ -23,7 +25,7 @@
     justify-content: center;
 }
 
-.entry {
+.reviews .entry {
     display: flex;
     flex-direction: column;
     text-align: center;
