@@ -16,14 +16,56 @@
     text-align: center;
     justify-content: center;
     padding: 20px;
+    padding-bottom: 10px;
     background: #081A29;
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 6;
 }
 
 .mobilefirstline {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
 }
+
+.mobilefirstline .left {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobilefirstline .right {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobileimgcontainer img {
+    max-width: 100px;
+    width: auto;
+    height: auto;
+}
+
+.right img {
+    max-width: 50px;
+    width: auto;
+    height: auto;
+}
+
+.mobileimgcontainer {}
+
+
 
 input {
     color: #D9D9D9;

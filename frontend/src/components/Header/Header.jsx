@@ -29,8 +29,23 @@ const Header = () => {
         isMobile ? (
           <>
             <div className="mobilefirstline">
-              <img width={"100px"} src={dropdown} />
-              <img src={logo} />
+              <div className="left">
+                <div className="mobileimgcontainer">
+                  <img src={dropdown} />
+                </div>
+                <div className="mobileimgcontainer">
+                  <img src={logo} />
+                </div>
+              </div>
+
+              <div className="right">
+                <div className="mobileimgcontainer">
+                  <img src={cart} />
+                </div>
+                <div className="mobileimgcontainer">
+                  <img src={account} />
+                </div>
+              </div>
             </div>
             <Search />
           </>

@@ -15,6 +15,7 @@
 .mobilerecom {
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
     gap: 10px;
     background: #081A29;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
