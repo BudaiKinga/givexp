@@ -12,7 +12,20 @@
     box-shadow: 0 16px 10px rgba(0, 0, 0, 0.3);
 }
 
-.title {
+.mobilekategoriak {
+    background: #0E2F4B;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 4;
+    box-shadow: 0 16px 10px rgba(0, 0, 0, 0.3);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.kategoriak .title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,10 +34,29 @@
     font-family: "Playfair Display";
 }
 
+.mobilekategoriak .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #F1D27D;
+    font-size: 26px;
+    font-family: "Playfair Display";
+}
+
 .kategoriak .lists {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 50px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.mobilekategoriak .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     align-items: center;
     justify-content: center;
@@ -33,10 +65,26 @@
 .kategoriak .list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
     gap: 62px;
 }
 
-.entry {
+.mobilekategoriak .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.kategoriak .entry {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -45,6 +93,40 @@
     font-size: 24px;
 }
 
+.mobilekategoriak .entry {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: "Lora";
+    font-size: 18px;
+}
+
 .kategoriak .entry p {
     margin-bottom: 1%;
+}
+
+.mobilekategoriak .entry p {
+    margin: 0;
+    max-width: 100px;
+    line-height: 14px;
+}
+
+.mobilekategoriak .midtext {
+    /* padding-bottom: 15px; */
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kategoriak .entry img {
+    width: 165px;
+    height: 165px;
+}
+
+.mobilekategoriak .entry img {
+    width: 100px;
+    height: 100px;
 }

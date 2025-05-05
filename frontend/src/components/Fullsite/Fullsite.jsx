@@ -17,8 +17,8 @@ const Fullsite = () => {
       <>
         <Header />
         <Recommendations />
-        {/* <Kategoriak />
-        <Terkep />
+        <Kategoriak />
+        {/* <Terkep />
         <Reviews /> */}
       </>
     );
