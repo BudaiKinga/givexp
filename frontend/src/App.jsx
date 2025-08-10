@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Fullsite from "./components/Fullsite/Fullsite";
 
@@ -6,9 +7,15 @@ function App() {
   localStorage.setItem("isMobile", isMobile);
 
   return (
-    <div className="app">
-      <Fullsite />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Fullsite />}>
+          {/* <Route path="xp/:category/:partner" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
