@@ -3,7 +3,7 @@ import "@fontsource/playfair-display";
 import "@fontsource/lora";
 import tbt_zsombi from "../../../../public/images/partner/tbt_zsombi/home.png";
 import { prependMobile } from "../../../utils/utils";
-import { getRecommendations } from "../../../backend/apicalls";
+import { getPartnerXp, getRecommendations } from "../../../backend/apicalls";
 import { useEffect, useState } from "react";
 
 const Recommendations = () => {
@@ -15,15 +15,24 @@ const Recommendations = () => {
     });
   }, []);
 
-  // onclick: elkéri a backendtől
-  // redirect: /xp/workout/tbt
+  const recommendationClick = async (e) => {
+    getPartnerXp(e.id).then((r) => {
+      console.log(r);
+    });
+    // TODO: load from backend
+    //  navigate /xp/cathegory/partner
+  };
 
   return (
     <div className={prependMobile("recom")}>
       <div className="title">Ajánlott élményeink</div>
       <div className="list">
-        {entries.map((e, index) => (
-          <div className="entry">
+        {entries.map((e) => (
+          <div
+            key={e.id}
+            className="entry"
+            onClick={() => recommendationClick(e)}
+          >
             <div className="midtext">
               <p>{e.name}</p>
             </div>

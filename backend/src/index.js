@@ -5,6 +5,7 @@ var cors = require("cors");
 const express = require("express");
 const { readConfig } = require("./readconfig");
 const { getRecommendations } = require("./recommendations");
+const { getPartnerXp } = require("./partnerxp");
 
 const config = readConfig(process.argv[2]);
 
@@ -42,6 +43,11 @@ var setupEndpoints = (app) => {
 
   app.get("/recommendations", (req, res) => {
     res.send(getRecommendations());
+  });
+  app.get("/partnerxp", (req, res) => {
+    const partnerId = req.query.partnerId;
+    console.log(`here, partnerId: ${partnerId}`);
+    res.send(getPartnerXp(partnerId));
   });
 };
 

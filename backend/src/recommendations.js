@@ -8,6 +8,7 @@ const getRecommendations = function () {
       {
         id: "tbt_zsombi",
         name: "Total Body Training",
+        cathegory: "workout",
         image:
           "data:image/jpeg;base64, " + base64Enc("./db/xp/tbt_zsombi/home.png"),
       },

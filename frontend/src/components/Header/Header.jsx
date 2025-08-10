@@ -58,8 +58,12 @@ const Header = () => {
               <img src={account} />
             </div>
             <div className="line2">
-              {menuItems.map((item) => {
-                return <div className="button">{item}</div>;
+              {menuItems.map((item, index) => {
+                return (
+                  <div key={index} className="button">
+                    {item}
+                  </div>
+                );
               })}
             </div>
           </>
