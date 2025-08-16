@@ -1,18 +1,20 @@
+const { readAll } = require("./services/partnerService");
 const { base64Enc } = require("./utils");
 
+
 const getRecommendations = function () {
-  // TODO: read all from DB
+  const data = readAll();
+  var responseBody = [];
+  for (let i = 0; i < data.length; i++) {
+    responseBody.push({
+      partner_id: data[i].partner_id,
+      partner_name: data[i].partner_name,
+      thumbnail: "data:image/jpeg;base64, " + base64Enc(data[i].thumbnail_home)
+    })
+  }
   const res = {
     status: "success",
-    data: [
-      {
-        id: "tbt_zsombi",
-        name: "Total Body Training",
-        cathegory: "workout",
-        image:
-          "data:image/jpeg;base64, " + base64Enc("./db/xp/tbt_zsombi/home.png"),
-      },
-    ],
+    data: responseBody,
   };
   return res;
 };

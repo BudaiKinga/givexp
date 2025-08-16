@@ -5,7 +5,8 @@ var cors = require("cors");
 const express = require("express");
 const { readConfig } = require("./readconfig");
 const { getRecommendations } = require("./recommendations");
-const { getPartnerXp } = require("./partnerxp");
+const { getPartnerXps } = require("./partnerxp");
+const { createTables } = require("./setup");
 
 const config = readConfig(process.argv[2]);
 
@@ -32,6 +33,7 @@ var startup = async () => {
   }
 
   setupEndpoints(app);
+  setupDB();
 };
 
 var setupEndpoints = (app) => {
@@ -45,10 +47,16 @@ var setupEndpoints = (app) => {
     res.send(getRecommendations());
   });
   app.get("/partnerxp", (req, res) => {
-    const partnerId = req.query.partnerId;
+    const partnerId = Number(req.query.partnerId);
     console.log(`here, partnerId: ${partnerId}`);
-    res.send(getPartnerXp(partnerId));
+    const r = getPartnerXps(partnerId);
+    res.send(r);
   });
+};
+var setupDB = () => {
+  console.log("Setting up db...");
+  createTables();
+
 };
 
 startup();
