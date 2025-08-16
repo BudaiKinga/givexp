@@ -16,7 +16,7 @@ const Recommendations = () => {
   }, []);
 
   const recommendationClick = async (e) => {
-    getPartnerXp(e.id).then((r) => {
+    getPartnerXp(e.partner_id).then((r) => {
       console.log(r);
     });
     // TODO: load from backend
@@ -29,14 +29,14 @@ const Recommendations = () => {
       <div className="list">
         {entries.map((e) => (
           <div
-            key={e.id}
+            key={e.partner_id}
             className="entry"
             onClick={() => recommendationClick(e)}
           >
             <div className="midtext">
-              <p>{e.name}</p>
+              <p>{e.partner_name}</p>
             </div>
-            <img src={e.image} />
+            <img src={e.thumbnail} />
           </div>
         ))}
       </div>
