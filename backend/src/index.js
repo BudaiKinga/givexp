@@ -7,6 +7,7 @@ const { readConfig } = require("./readconfig");
 const { getRecommendations } = require("./recommendations");
 const { getPartnerXps } = require("./partnerxp");
 const { createTables } = require("./db/setup");
+const { getAllRecommendations } = require("./services/recommendationService");
 
 const config = readConfig(process.argv[2]);
 
@@ -44,7 +45,7 @@ var setupEndpoints = (app) => {
   });
 
   app.get("/recommendations", (req, res) => {
-    res.send(getRecommendations());
+    res.send(getAllRecommendations());
   });
   app.get("/partnerxp", (req, res) => {
     const partnerId = Number(req.query.partnerId);
