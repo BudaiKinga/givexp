@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require("../db/db");
 
 const readPartnerXPs = (partner_id) => {
   const stmt = db.prepare(`
@@ -6,22 +6,19 @@ const readPartnerXPs = (partner_id) => {
     WHERE partner_id=?
   `);
 
-  const partnerXPs = stmt.all(
-    partner_id
-  );
+  const partnerXPs = stmt.all(partner_id);
 
   return partnerXPs;
-}
+};
 
 const readAll = () => {
   const stmt = db.prepare(`
     SELECT * FROM partner_xp
   `);
 
-  const partners = stmt.all();
+  const xps = stmt.all();
 
-  return partners;
-
-}
+  return xps;
+};
 
 module.exports = { readPartnerXPs, readAll };

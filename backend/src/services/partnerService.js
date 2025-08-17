@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../db/db');
 
 function insertPartner(data) {
   const stmt = db.prepare(`

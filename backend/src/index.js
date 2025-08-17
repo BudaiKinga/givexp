@@ -6,7 +6,7 @@ const express = require("express");
 const { readConfig } = require("./readconfig");
 const { getRecommendations } = require("./recommendations");
 const { getPartnerXps } = require("./partnerxp");
-const { createTables } = require("./setup");
+const { createTables } = require("./db/setup");
 
 const config = readConfig(process.argv[2]);
 
@@ -56,7 +56,6 @@ var setupEndpoints = (app) => {
 var setupDB = () => {
   console.log("Setting up db...");
   createTables();
-
 };
 
 startup();
