@@ -41,7 +41,7 @@ const createTableImage = `
 `;
 
 const creatTableThumbnails = `
-CREATE TABLE IF NOT EXISTS thumbnails (
+CREATE TABLE IF NOT EXISTS thumbnail (
     thumbnail_id INTEGER PRIMARY KEY AUTOINCREMENT,
     thumbnail_path TEXT
   )
@@ -66,14 +66,14 @@ const createTableCathegory = `
 const createTableRecommendation = `
  CREATE TABLE IF NOT EXISTS recommendation (
     recommendation_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    xp_idxp_id INTEGER NOT NULL,
+    xp_id INTEGER NOT NULL,
     creation_ts DATETIME DEFAULT (CURRENT_TIMESTAMP),
     expiry_date DATETIME
   )
 `;
 
 const createTablePrice = `
-  CREATE TABLE IF NOT EXISTS partner (
+  CREATE TABLE IF NOT EXISTS price (
     price_id INTEGER PRIMARY KEY AUTOINCREMENT,
     option_id INTEGER,
     price NUMBER
